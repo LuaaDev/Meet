@@ -34,9 +34,10 @@ io.on('connection', socket => {
   }); 
 
     socket.on('disconnect', () => {
-      socket.to(roomId).broadcast.emit('user-disconnected', userId).redirect('https://www.google.com/')
+      socket.to(roomId).broadcast.emit('user-disconnected', userId)
     })
   })
 })
 
-server.listen(process.env.PORT||3030)
+let port = process.env.PORT || 3030;
+server.listen(port, () => `Za! Meet is listening on port ${port}!`)
