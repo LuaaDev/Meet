@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
   res.redirect(`/${uuidV4()}`)
 })
 
-app.get(':room', (req, res) => {
+app.get('/:room', (req, res) => {
   res.render('room', { roomId: req.params.room })
 })
 
