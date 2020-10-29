@@ -41,4 +41,4 @@ io.on('connection', socket => {
 
 let port = process.env.PORT || 3030;
 server.listen(port)
-console.log("Za! Meet is on port 3030!")
+console.log("Meet is on port 3030!")
